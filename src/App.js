@@ -1,5 +1,11 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+import AddFunds from "./components/AddFunds";
+import AllTransactions from "./components/AllTransactions";
+import AllWallets from "./components/AllWallets";
+import CheckBalance from "./components/CheckBalance";
+import NewWallet from "./components/NewWallet";
+import SpendFunds from "./components/SpendFunds";
 import "./App.css";
 
 function App() {
