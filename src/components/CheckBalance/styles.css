@@ -1,0 +1,17 @@
+.check-balance label {
+  display: inline-block;
+  width: 30vw;
+  text-align: justify;
+  margin-left: 20px;
+}
+.check-balance select {
+  padding: 10px;
+  width: 200px;
+  margin: 20px;
+}
+.check-balance .sub {
+  display: flex;
+  width: 70vw;
+  justify-content: center;
+  margin-top: 30px;
+}

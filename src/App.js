@@ -17,7 +17,7 @@ function App() {
       <div className="body-container">
         <div className="navbar">
           <nav>
-            <ul>
+            <ul className="nav-text">
               <li>
                 <Link to="/">All Wallets</Link>
               </li>
