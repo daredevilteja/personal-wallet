@@ -2,3 +2,19 @@
   display: flex;
   flex-direction: column;
 }
+
+.Title {
+  text-align: center;
+}
+
+.body-container {
+  display: flex;
+}
+
+.body-container .navbar {
+  width: 20vw;
+}
+
+.body-container .main-container {
+  width: 80vw;
+}
