@@ -1,0 +1,19 @@
+.new-wallet label {
+    display: inline-block;
+    width: 30vw;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.new-wallet [type=text], .new-wallet [type=number] {
+    padding: 10px;
+    width: 200px;
+    margin: 20px;
+}
+
+.new-wallet .sub {
+    display: flex;
+    width: 70vw;
+    justify-content: center;
+    margin-top: 30px;
+}

@@ -8,14 +8,16 @@ export default function NewWallet() {
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={(e) => handleSubmit(e)} className="new-wallet">
         <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" /> <br />
         <label htmlFor="phone">Phone</label>
         <input type="number" id="phone" name="Phone" /> <br />
         <label htmlFor="amount">Amount (RS)</label>
         <input type="text" id="amount" name="amount" /> <br />
-        <input type="submit" value="Submit" /> <br />
+        <div className="sub">
+          <input type="submit" value="Submit" /> <br />
+        </div>
       </form>
     </>
   );
