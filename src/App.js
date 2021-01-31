@@ -14,13 +14,7 @@ function App() {
     name: "",
     phnum: "",
     balance: "",
-    transactions: [
-      {
-        Date: "",
-        amount: "",
-        conBalance: "",
-      },
-    ],
+    transactions: [],
   };
   const initial = [
     {
