@@ -12,35 +12,55 @@ function App() {
   const newObj = {
     id: "",
     name: "",
-    Date: "",
     phnum: "",
-    amount: "",
     balance: "",
+    transactions: [
+      {
+        Date: "",
+        amount: "",
+        conBalance: "",
+      },
+    ],
   };
   const initial = [
     {
       id: "1",
       name: "Name1",
-      Date: "12 Jan, 5 pm",
       phnum: "9988998777",
-      amount: "",
       balance: "765.43",
+      transactions: [
+        {
+          Date: "12 Jan, 5 pm",
+          amount: "",
+          conBalance: "",
+        },
+      ],
     },
     {
       id: "2",
       name: "Name2",
-      Date: "12 Jan, 5 pm",
       phnum: "7763423688",
-      amount: "",
       balance: "443.24",
+      transactions: [
+        {
+          Date: "12 Jan, 5 pm",
+          amount: "",
+          conBalance: "",
+        },
+      ],
     },
     {
       id: "3",
       name: "Name3",
-      Date: "12 Jan, 5 pm",
       phnum: "3434565466",
-      amount: "",
       balance: "20.05",
+      transactions: [
+        {
+          Date: "12 Jan, 5 pm",
+          amount: "",
+          conBalance: "",
+        },
+      ],
     },
   ];
   const [person, setPerson] = useState(initial);
@@ -49,13 +69,22 @@ function App() {
     newObj.id = user.id;
     newObj.name = user.name;
     newObj.phnum = user.phnum;
-    newObj.amount = user.amount;
     newObj.balance = user.balance;
 
     const newUser = { ...newObj };
     person.push(newUser);
     setPerson([...person]);
   };
+
+  const addFunds = (user) => {
+    person.forEach((val, idx) => {
+      if (val.name === user.name) {
+        val.balance = user.balance;
+        val.transactions = user.transactions;
+      }
+    });
+  };
+
   return (
     <div className="App">
       <div className="Title">
@@ -92,10 +121,10 @@ function App() {
               <NewWallet lisT={person} setUser={addNewUser} />
             </Route>
             <Route path="/checkBalance">
-              <CheckBalance users={person}/>
+              <CheckBalance users={person} />
             </Route>
             <Route path="/addFunds">
-              <AddFunds />
+              <AddFunds users={person} addFunds={addFunds} />
             </Route>
             <Route path="/spendFunds">
               <SpendFunds />
