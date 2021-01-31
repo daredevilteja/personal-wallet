@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 export default function AddFunds(props) {
+  const [msg, setMsg] = useState("");
   const newObj = {
     name: "",
     balance: "",
@@ -26,12 +27,15 @@ export default function AddFunds(props) {
         calc.Date = calc.Date.toString().slice(0, 15);
         calc.amount = e.target[1].value;
         calc.conBalance = Number(val.balance) + Number(calc.amount);
+        calc.conBalance = Number(calc.conBalance).toFixed(2);
+        calc.amount = `+${calc.amount}`;
 
         newObj.balance = calc.conBalance;
         newObj.name = val.name;
         newObj.transactions.push(calc);
 
         props.addFunds(newObj);
+        setMsg("Funds added successfully");
       }
     });
   };
@@ -49,11 +53,12 @@ export default function AddFunds(props) {
         </select>
         <br />
         <label htmlFor="amount">Amount (Rs)</label>
-        <input type="number" id="amount" name="amount" /> <br />
+        <input type="text" id="amount" name="amount" /> <br />
         <div className="sub">
-          <input type="submit" value="Get Balance" />
+          <input type="submit" value="Submit" />
         </div>
       </form>
+      <p className="add-funds-msg">{msg}</p>
     </>
   );
 }

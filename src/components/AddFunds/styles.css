@@ -1,17 +1,25 @@
 .add-funds label {
-    display: inline-block;
-    width: 30vw;
-    text-align: justify;
-    margin-left: 20px;
+  display: inline-block;
+  width: 30vw;
+  text-align: justify;
+  margin-left: 20px;
 }
-.add-funds select, .add-funds [type=number] {
-    padding: 10px;
-    width: 200px;
-    margin: 20px;
+.add-funds select,
+.add-funds [type="text"] {
+  padding: 10px;
+  width: 200px;
+  margin: 20px;
 }
 .add-funds .sub {
-    display: flex;
-    width: 70vw;
-    justify-content: center;
-    margin-top: 30px;
+  display: flex;
+  width: 70vw;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.add-funds-msg {
+  color: black;
+  width: available;
+  padding: 15px;
+  text-align: center;
 }

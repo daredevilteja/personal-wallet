@@ -127,7 +127,7 @@ function App() {
               <AddFunds users={person} addFunds={addFunds} />
             </Route>
             <Route path="/spendFunds">
-              <SpendFunds />
+              <SpendFunds users={person} addFunds={addFunds} />
             </Route>
             <Route path="/allTransactions">
               <AllTransactions />
