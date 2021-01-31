@@ -30,9 +30,12 @@ export default function SpendFunds(props) {
         calc.conBalance = Number(calc.conBalance).toFixed(2);
         calc.amount = `-${calc.amount}`;
 
+        const newCalc = { ...calc };
+
         newObj.balance = calc.conBalance;
         newObj.name = val.name;
-        newObj.transactions.push(calc);
+        newObj.transactions = val.transactions;
+        newObj.transactions.push(newCalc);
 
         props.addFunds(newObj);
         setMsg("Funds deducted successfully");
