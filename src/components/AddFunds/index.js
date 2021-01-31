@@ -38,7 +38,7 @@ export default function AddFunds(props) {
         newObj.transactions.push(newCalc);
 
         props.addFunds(newObj);
-        console.log(props.users);
+
         setMsg("Funds added successfully");
       }
     });
