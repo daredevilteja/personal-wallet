@@ -30,9 +30,9 @@ function App() {
       balance: "765.43",
       transactions: [
         {
-          Date: "12 Jan, 5 pm",
-          amount: "",
-          conBalance: "",
+          Date: "Sun Jan 31 2021",
+          amount: "+200",
+          conBalance: "456",
         },
       ],
     },
@@ -43,9 +43,9 @@ function App() {
       balance: "443.24",
       transactions: [
         {
-          Date: "12 Jan, 5 pm",
-          amount: "",
-          conBalance: "",
+          Date: "Sun Jan 31 2021",
+          amount: "-200",
+          conBalance: "600",
         },
       ],
     },
@@ -56,9 +56,9 @@ function App() {
       balance: "20.05",
       transactions: [
         {
-          Date: "12 Jan, 5 pm",
-          amount: "",
-          conBalance: "",
+          Date: "Sun Jan 31 2021",
+          amount: "+20",
+          conBalance: "20.05",
         },
       ],
     },
@@ -130,7 +130,7 @@ function App() {
               <SpendFunds users={person} addFunds={addFunds} />
             </Route>
             <Route path="/allTransactions">
-              <AllTransactions />
+              <AllTransactions users={person} />
             </Route>
             <Route path="/">
               <AllWallets val={person} />
