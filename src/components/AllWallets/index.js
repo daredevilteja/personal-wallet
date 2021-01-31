@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
 
 export default function AllWallets(props) {
@@ -15,7 +15,7 @@ export default function AllWallets(props) {
 
         {person.map((val, idx) => {
           return (
-            <tr>
+            <tr key={`${val}_${idx}`}>
               <td>{`Usr ${val.id}`}</td>
               <td>{val.name}</td>
               <td>{val.phnum}</td>
