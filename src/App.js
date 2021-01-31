@@ -9,7 +9,7 @@ import SpendFunds from "./components/SpendFunds";
 import "./App.css";
 
 function App() {
-  let newObj = {
+  const newObj = {
     id: "",
     name: "",
     Date: "",
@@ -44,6 +44,18 @@ function App() {
     },
   ];
   const [person, setPerson] = useState(initial);
+
+  const addNewUser = (user) => {
+    newObj.id = user.id;
+    newObj.name = user.name;
+    newObj.phnum = user.phnum;
+    newObj.amount = user.amount;
+    newObj.balance = user.balance;
+
+    const newUser = { ...newObj };
+    person.push(newUser);
+    setPerson([...person]);
+  };
   return (
     <div className="App">
       <div className="Title">
@@ -77,7 +89,7 @@ function App() {
         <div className="main-container">
           <Switch>
             <Route path="/newWallet">
-              <NewWallet />
+              <NewWallet lisT={person} setUser={addNewUser} />
             </Route>
             <Route path="/checkBalance">
               <CheckBalance />

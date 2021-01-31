@@ -17,3 +17,10 @@
     justify-content: center;
     margin-top: 30px;
 }
+
+.usr-msg {
+    color: red;
+    width: available;
+    padding: 15px;
+    text-align: center;
+}

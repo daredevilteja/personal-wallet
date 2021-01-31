@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
-export default function NewWallet() {
+export default function NewWallet(props) {
+  const [msg, setMsg] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newObj = {
+      id: "",
+      name: "",
+      phnum: "",
+      amount: "",
+      balance: "",
+    };
+
+    newObj.id = props.lisT.length + 1;
+    newObj.name = e.target[0].value;
+    newObj.phnum = e.target[1].value;
+    newObj.amount = e.target[2].value;
+    newObj.balance = Number(newObj.amount);
+
+    const newUser = { ...newObj };
+
+    props.setUser(newUser);
+    setMsg("User has Added Successfully!");
   };
 
   return (
@@ -19,6 +39,7 @@ export default function NewWallet() {
           <input type="submit" value="Submit" /> <br />
         </div>
       </form>
+      <p className="usr-msg">{msg}</p>
     </>
   );
 }
