@@ -92,7 +92,7 @@ function App() {
               <NewWallet lisT={person} setUser={addNewUser} />
             </Route>
             <Route path="/checkBalance">
-              <CheckBalance />
+              <CheckBalance users={person}/>
             </Route>
             <Route path="/addFunds">
               <AddFunds />
