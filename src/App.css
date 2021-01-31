@@ -5,6 +5,8 @@
 
 .Title {
   text-align: center;
+  background-color: rgb(95, 155, 213);
+  border: 2px solid black;
 }
 
 .body-container {
@@ -12,14 +14,19 @@
 }
 
 .body-container .navbar {
+  border-top: 0;
+  border-left: 2px;
+  border-right: 2px;
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: black;
   height: 100vh;
-  background-color: purple;
+  background-color: rgb(95, 155, 213);
+  display: flex;
+  justify-content: center;
 }
 
 .body-container .nav-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   list-style: none;
   width: 25vw;
@@ -39,7 +46,7 @@
 }
 
 .body-container .nav-text li:hover {
-  background-color: orange;
+  background-color: rgb(255,192,0);
 }
 
 .body-container .main-container {

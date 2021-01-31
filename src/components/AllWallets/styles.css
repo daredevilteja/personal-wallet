@@ -1,5 +1,9 @@
 table {
-  width: 80vw;
+  width: 60vw;
   text-align: center;
   padding: 5px;
+}
+
+table td {
+  width: 25%;
 }

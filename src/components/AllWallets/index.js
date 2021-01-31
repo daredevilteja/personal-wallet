@@ -5,15 +5,13 @@ export default function AllWallets() {
   return (
     <>
       <table>
-        <thead>
-          <tr>
-            <th>User Id</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Balance (Rs)</th>
-          </tr>
-        </thead>
-        <tbody>
+        <tr>
+          <th>User Id</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Balance (Rs)</th>
+        </tr>
+
         <tr>
           <td>Usr1</td>
           <td>Name1</td>
@@ -32,7 +30,6 @@ export default function AllWallets() {
           <td>3434565466</td>
           <td>20.05</td>
         </tr>
-        </tbody>
       </table>
     </>
   );
