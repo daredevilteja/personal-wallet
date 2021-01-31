@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
-export default function AllWallets() {
+export default function AllWallets(props) {
+  const person = props.val;
   return (
     <>
       <table>
@@ -12,24 +13,16 @@ export default function AllWallets() {
           <th>Balance (Rs)</th>
         </tr>
 
-        <tr>
-          <td>Usr1</td>
-          <td>Name1</td>
-          <td>9988998777</td>
-          <td>765.43</td>
-        </tr>
-        <tr>
-          <td>Usr2</td>
-          <td>Name2</td>
-          <td>7763423688</td>
-          <td>443.24</td>
-        </tr>
-        <tr>
-          <td>Usr3</td>
-          <td>Name3</td>
-          <td>3434565466</td>
-          <td>20.05</td>
-        </tr>
+        {person.map((val, idx) => {
+          return (
+            <tr>
+              <td>{`Usr ${val.id}`}</td>
+              <td>{val.name}</td>
+              <td>{val.phnum}</td>
+              <td>{val.balance}</td>
+            </tr>
+          );
+        })}
       </table>
     </>
   );

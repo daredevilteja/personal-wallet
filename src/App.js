@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import AddFunds from "./components/AddFunds";
 import AllTransactions from "./components/AllTransactions";
@@ -9,6 +9,41 @@ import SpendFunds from "./components/SpendFunds";
 import "./App.css";
 
 function App() {
+  let newObj = {
+    id: "",
+    name: "",
+    Date: "",
+    phnum: "",
+    amount: "",
+    balance: "",
+  };
+  const initial = [
+    {
+      id: "1",
+      name: "Name1",
+      Date: "12 Jan, 5 pm",
+      phnum: "9988998777",
+      amount: "",
+      balance: "765.43",
+    },
+    {
+      id: "2",
+      name: "Name2",
+      Date: "12 Jan, 5 pm",
+      phnum: "7763423688",
+      amount: "",
+      balance: "443.24",
+    },
+    {
+      id: "3",
+      name: "Name3",
+      Date: "12 Jan, 5 pm",
+      phnum: "3434565466",
+      amount: "",
+      balance: "20.05",
+    },
+  ];
+  const [person, setPerson] = useState(initial);
   return (
     <div className="App">
       <div className="Title">
@@ -57,7 +92,7 @@ function App() {
               <AllTransactions />
             </Route>
             <Route path="/">
-              <AllWallets />
+              <AllWallets val={person} />
             </Route>
           </Switch>
         </div>
